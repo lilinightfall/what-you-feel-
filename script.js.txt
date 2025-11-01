@@ -1,0 +1,23 @@
+let answers = {};
+
+function recordAnswer(questionId, answer) {
+    answers[questionId] = answer;
+
+    // Hide current question
+    document.getElementById(questionId).style.display = "none";
+
+    // Show next question
+    const nextQuestionNumber = parseInt(questionId[1]) + 1;
+    const nextQuestion = document.getElementById('q' + nextQuestionNumber);
+    if(nextQuestion) {
+        nextQuestion.style.display = "block";
+    } else {
+        // No more questions, show result
+        document.getElementById('quiz').style.display = "none";
+        document.getElementById('result').style.display = "block";
+
+        // Save answers in local storage
+        localStorage.setItem('loveQuizAnswers', JSON.stringify(answers));
+        console.log("Saved answers:", answers);
+    }
+}
