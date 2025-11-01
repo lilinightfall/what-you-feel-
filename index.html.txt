@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Love Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Personality Quiz!</h1>
+        <p>Answer honestly to see your results!</p>
+
+        <div id="quiz">
+            <div class="question" id="q1">
+                <p>1. How do you feel when you spend time with your best friend?</p>
+                <button onclick="recordAnswer('q1', 'happy')">Happy</button>
+                <button onclick="recordAnswer('q1', 'neutral')">Neutral</button>
+                <button onclick="recordAnswer('q1', 'awkward')">Awkward</button>
+            </div>
+
+            <div class="question" id="q2" style="display:none;">
+                <p>2. How important is this friendship to you?</p>
+                <button onclick="recordAnswer('q2', 'very')">Very important</button>
+                <button onclick="recordAnswer('q2', 'somewhat')">Somewhat</button>
+                <button onclick="recordAnswer('q2', 'not_much')">Not much</button>
+            </div>
+
+            <div class="question" id="q3" style="display:none;">
+                <p>3. Would you like to spend more time together?</p>
+                <button onclick="recordAnswer('q3', 'yes')">Yes</button>
+                <button onclick="recordAnswer('q3', 'maybe')">Maybe</button>
+                <button onclick="recordAnswer('q3', 'no')">No</button>
+            </div>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Thanks for answering!</h2>
+            <p>Your responses have been saved.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
